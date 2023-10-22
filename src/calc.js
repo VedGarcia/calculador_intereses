@@ -1,7 +1,8 @@
 export default function calcCuote(capital, interes, cuotas) {
- //(capital * Porcentaje de la tasa de interés)/(1-(1 + Porcentaje de la tasa de interés)^(- Cantidad de cuotas))
-let result;
-interes = interes/100
-result = (capital * (interes))/(1-(1+interes)**(-cuotas)) ;
-return result;
+  if (capital && interes && cuotas != 0) {
+    let intereses = interes / 100;
+    const result = (capital * intereses) / (1 - (1 + intereses) ** -cuotas);
+    return alert(result);
+
+} else {return alert("Debes completar los campos de Capital, Interés y Cuotas")}
 }
