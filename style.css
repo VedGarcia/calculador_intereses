@@ -4,7 +4,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: #FFF2D8 ;
+  color: #fff2d8;
   background: #113946;
 
   font-synthesis: none;
@@ -33,9 +33,25 @@ h1 {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  display: flex;
+  gap: 10px
 }
 .container {
   width: 50em;
+  background-color: #ffffff22;
+  box-shadow: 0 0 10px white;
+  position: relative;
+  border-radius: 10px;
+}
+.container2 {
+  width: 20em;
+  height: auto;
+  background-color: #00000099;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+}
+.list_montos {
+  color: #fff;
 }
 .formulary {
   width: 46em;
@@ -53,7 +69,7 @@ h1 {
   width: 35%;
   font-size: 1.5em;
   font-weight: 100;
-  color: #EAD7BB;
+  color: #ead7bb;
   background-color: transparent;
   border: none;
   border-bottom: solid 2px white;
@@ -62,8 +78,8 @@ h1 {
 }
 #capital::placeholder,
 #interes::placeholder,
-#cuotas::placeholder{
-  color: #BCA37F;
+#cuotas::placeholder {
+  color: #bca37f;
   text-shadow: 0 0 5px #000;
 }
 
@@ -73,19 +89,19 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-#btn{
+#btn {
   font-size: 1.5em;
   font-weight: 600;
   height: 20%;
   border: none;
   border-radius: 8px;
   padding: 10px;
- background-color: #BCA37F;
- color: #113946;
+  background-color: #bca37f;
+  color: #113946;
 }
-#btn:hover{
+#btn:hover {
   box-shadow: 0 0 10px white;
-  text-shadow: 0 0 5px #FFF2D8;
+  text-shadow: 0 0 5px #fff2d8;
 }
 /* .section_cuotas{
 

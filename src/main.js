@@ -1,10 +1,11 @@
 import "../style.css";
-import calcCuote from "./calc";
+import { calcCuote } from "./calc";
 
 //imprimiendo en HTML
 const app = document.querySelector("#app");
 
 const container = document.createElement("div");
+
 const title = document.createElement("h1");
 const form = document.createElement("form");
 const inputCapital = document.createElement("input");
@@ -28,9 +29,8 @@ inputCuotas.type = "number";
 inputCuotas.id = "cuotas";
 inputCuotas.placeholder = "Nro. de cuotas";
 
-btn.textContent = 'Calcular';
+btn.textContent = "Calcular";
 btn.id = "btn";
-
 
 form.append(inputCapital, inputInteres, inputCuotas, btn);
 container.append(title, form);
@@ -52,6 +52,8 @@ inputCuotas.addEventListener("change", (e) => {
   valueCuotas = e.target.valueAsNumber;
 });
 
-// Se agrega escucha a Boton Calcular
-const calcular = () => calcCuote(valueCapital, valueInteres, valueCuotas);
-btn.addEventListener('click', calcular)
+
+btn.addEventListener("click", (e) => {
+  e.preventDefault();
+  calcCuote(valueCapital, valueInteres, valueCuotas, app);
+});
