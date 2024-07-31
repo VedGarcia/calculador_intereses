@@ -1,7 +1,7 @@
 import "../style.css";
 import { calcCuote, cleanForm } from "./constant";
 
-//imprimiendo en HTML
+// Imprimiendo en HTML
 const app = document.querySelector("#app");
 
 const container = document.createElement("div");
@@ -20,7 +20,7 @@ title.textContent = "Calculadora de Intereses";
 contain.classList.add("contain");
 container.classList.add("container");
 form.classList.add("formulary");
-firma.classList.add("firma")
+firma.classList.add("firma");
 
 firma.textContent = "by {VEd";
 inputCapital.type = "number";
@@ -45,12 +45,12 @@ container.append(form);
 contain.append(container);
 app.append(title, contain, firma);
 
-//Se declara variables para guardar los datos de los Inputs
+// Se declara variables para guardar los datos de los Inputs
 let valueCapital;
 let valueInteres;
 let valueCuotas;
 
-//Extrayendo datos desde inputs
+// Extrayendo datos desde inputs
 inputCapital.addEventListener("change", (e) => {
   valueCapital = e.target.valueAsNumber;
 });
