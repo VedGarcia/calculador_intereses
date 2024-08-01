@@ -90,7 +90,6 @@ function eliminarResultado(id) {
   const elemento = document.getElementById(id);
   if (elemento) {
     elemento.remove();
-    elementosid = 0;
   } 
 }
 
