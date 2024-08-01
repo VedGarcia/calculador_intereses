@@ -48,7 +48,7 @@ function generarLista(array, ubicacion, cuotaFija, obj) {
   const container2 = document.createElement("div");
   container2.classList.add("container2");
 
-//se genera la id random
+// se genera la id random
   const idUnico = `idmix-${Date.now()}`; 
   container2.setAttribute("id", idUnico);
 
@@ -72,7 +72,7 @@ function generarLista(array, ubicacion, cuotaFija, obj) {
   }
   ol.append(...nodos);
 
-//se genera el boton para eliminar la lista
+// se genera el boton para eliminar la lista
   const botonEliminar = document.createElement("button"); 
   botonEliminar.textContent = "Cerrar";
   botonEliminar.classList.add("botonEliminar");
