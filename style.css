@@ -114,10 +114,13 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #78c8e2;
   margin: .5em;
   outline: none;
+  transition: transform 0.3s ease;
 }
+
 #btn:hover, #remove:hover {
   box-shadow: 0 0 10px white;
   background-color: #4d0b70da;
+  transform: scale(1.1) rotate(1deg);
 }
 
 .firma{
@@ -125,11 +128,13 @@ input[type="number"]::-webkit-outer-spin-button {
   position: sticky;
   bottom: 1em;
   text-align: right;
-  opacity: .5;
-  color: #562272f3;
+  opacity: .4;
+  color: #00c3ff;
+  transition: transform 0.5s ease;
 }
 .firma:hover{
-  text-shadow: 0 0 2px rgb(255, 255, 255);
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.548);
+  transform: scale(1) rotate(0.5deg);
 }
 
 
@@ -172,16 +177,27 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 }
 
-.delete-button{
+.delete-button {
   background-color: #ff0000;
   color: #ffffff;
   border: none;
   border-radius: 5px;
   padding: 5px 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.delete-button:hover{
-  background-color: #800000;
+.delete-button:hover {
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
